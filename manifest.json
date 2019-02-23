@@ -6,6 +6,11 @@
       "default_icon": "logo.png",
       "default_popup": "popup.html",
       "default_title": "On task"
-    },
+    },    
+    "permissions": [
+        "http://*/*",
+        "https://*/*",
+        "activeTab"
+    ],
     "manifest_version": 2
   }
