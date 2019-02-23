@@ -1,0 +1,11 @@
+  {
+    "name": "Stay on task (extension)",
+    "version": "1.0",
+    "description": "An extension that blocks certain websites you choose so you can stay on task",
+    "browser_action": {
+      "default_icon": "logo.png",
+      "default_popup": "popup.html",
+      "default_title": "On task"
+    },
+    "manifest_version": 2
+  }
