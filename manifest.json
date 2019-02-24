@@ -10,7 +10,8 @@
     "permissions": [
         "http://*/*",
         "https://*/*",
-        "activeTab"
+        "activeTab",
+        "unlimitedStorage"
     ],
     "manifest_version": 2
   }
