@@ -1,6 +1,6 @@
 {
   "name": "Stay on task (extension)",
-  "version": "1.0",
+  "version": "5.9.6",
   "description": "An extension that blocks certain websites you choose so you can stay on task",
   "browser_action": {
     "default_icon": "logo.png",
@@ -12,13 +12,17 @@
       "unlimitedStorage",
       "storage"
   ],
-   "content_scripts": [
+  "content_scripts": [
      {
        "matches": ["<all_urls>"],
        "css": [],
        "js": ["block.js"]
      }
-   ],
+  ],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
   "web_accessible_resources": ["block.js"],
   "manifest_version": 2
 } 
