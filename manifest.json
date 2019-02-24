@@ -8,15 +8,17 @@
     "default_title": "On task"
   },    
   "permissions": [
-      "http://*/*",
-      "https://*/*",
       "activeTab",
-      "unlimitedStorage"
+      "unlimitedStorage",
+      "storage"
   ],
-  "content_scripts": [{
-      "css": [],
-      "js": ["block.js"],
-      "matches": ["*://*/*"]
-  }],
+   "content_scripts": [
+     {
+       "matches": ["<all_urls>"],
+       "css": [],
+       "js": ["block.js"]
+     }
+   ],
+  "web_accessible_resources": ["block.js"],
   "manifest_version": 2
-}
+} 
