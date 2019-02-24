@@ -3,6 +3,7 @@ html {
   max-width: 420px;
   min-height: 400px;
   max-height: 420px;
+  overflow:auto;
   padding:5px;
 }
 .p-input{
@@ -14,4 +15,7 @@ html {
 }
 .p-smallhead{
     font-size:30px;
+}
+.p-a{
+    margin-bottom:5px;
 }
