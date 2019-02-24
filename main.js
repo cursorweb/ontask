@@ -60,3 +60,22 @@ $(".p-a").click(function(){
       });
    });
 });
+$(".p-input").keydown(function(e){
+    if(e.keyCode == 13){
+        db.transaction(function (tx) {
+          tx.executeSql('create table if not exists web (text)');
+          var val = $(".p-input").val();
+          tx.executeSql("insert into web values (?)", [val]);
+          tx.executeSql('select * from web', [], function (tx, results) {
+             var len = results.rows.length, i;
+             sites = [];
+             for (i = 0; i < len; i++) {
+                sites.push(results.rows.item(i).text);
+             }
+             _refresh();
+             if(sites.length > 0){chrome.browserAction.setBadgeBackgroundColor({ color: [255, 0, 0, 255] });chrome.browserAction.setBadgeText({text: (sites.length).toString()});}
+             else{chrome.browserAction.setBadgeBackgroundColor({ color: [255, 0, 0, 0] });chrome.browserAction.setBadgeText({text: ""});}
+          });
+       });
+    }
+});
