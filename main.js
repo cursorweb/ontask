@@ -20,7 +20,8 @@ db.transaction(function (tx) {
       for (i = 0; i < len; i++) {
         sites.push(results.rows.item(i).text);
       }
-      _refresh();
+      if(sites.length > 0){_refresh();}
+      else{_reset();}
       if(sites.length > 0){chrome.browserAction.setBadgeBackgroundColor({ color: [255, 0, 0, 255] });chrome.browserAction.setBadgeText({text: (sites.length).toString()});}
       else{chrome.browserAction.setBadgeBackgroundColor({ color: [255, 0, 0, 0] });chrome.browserAction.setBadgeText({text: ""});}
           
@@ -54,8 +55,7 @@ $(".p-a").click(function(){
          for (i = 0; i < len; i++) {
             sites.push(results.rows.item(i).text);
          }
-         if(sites.length > 0){_refresh();}
-         else{_reset();}
+         _refresh();
          if(sites.length > 0){chrome.browserAction.setBadgeBackgroundColor({ color: [255, 0, 0, 255] });chrome.browserAction.setBadgeText({text: (sites.length).toString()});}
          else{chrome.browserAction.setBadgeBackgroundColor({ color: [255, 0, 0, 0] });chrome.browserAction.setBadgeText({text: ""});}
       });
