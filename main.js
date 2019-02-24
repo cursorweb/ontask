@@ -6,10 +6,18 @@ function _refresh(){
           $("<li>").html(i)
         );
     });
+    //window.localStorage.setItem('ontaskextension3e4ddc3f9a776e81ff817cad34f42091data', JSON.stringify(sites));
+    chrome.storage.sync.set({'site': sites}, function() {
+      console.log('Settings saved');
+    });
 }
 function _reset(){
     $(".p-li").empty();
     $(".p-li").html("<li>None yet!</li>");
+    //window.localStorage.setItem('ontaskextension3e4ddc3f9a776e81ff817cad34f42091data', JSON.stringify(sites));
+    chrome.storage.sync.set({'site': sites}, function() {
+      console.log('Settings saved');
+    });
 }
 var db = openDatabase('mydb', '1.0', 'my first database', 2 * 50 * 50);
 db.transaction(function (tx) {
