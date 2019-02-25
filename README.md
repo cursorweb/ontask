@@ -10,3 +10,4 @@ An extension that makes sure you are on task by only allowing certain websites
 If you get distracted, a GIF of the tsar bomba detonating will pop up.
 
 # Gallery
+![Boom](https://cdn.glitch.com/94bcb56f-a1ba-4f01-a73b-5935b3f7dfba%2Fontaskboom.PNG?1551115720819)
