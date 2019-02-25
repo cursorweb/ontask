@@ -14,3 +14,10 @@ If you get distracted, a GIF of the tsar bomba detonating will pop up.
 
 # Manual installation
 Click [Here](https://github.com/cursorweb/ontask)
+
+# Run developer mode
+1. [Install](https://github.com/cursorweb/ontask) the extension files.
+2. Extract the file
+3. Go to chrome://extensions
+4. Click load unpacked
+5. Choose the extracted file
