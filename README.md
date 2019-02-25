@@ -13,4 +13,4 @@ If you get distracted, a GIF of the tsar bomba detonating will pop up.
 ![Boom](https://cdn.glitch.com/94bcb56f-a1ba-4f01-a73b-5935b3f7dfba%2Fontaskboom.PNG?1551115720819)
 
 # Manual installation
-Click [Here](/cursorweb/ontask/archive/master.zip)
+Click [Here](https://github.com/cursorweb/ontask)
